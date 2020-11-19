@@ -14,6 +14,13 @@ module.exports = gql`
     name: String!
     createdAt: String!
   }
+  type Message {
+    id: ID!
+    name: String!
+    email: String!
+    body: String!
+    createdAt: String!
+  }
   input ProjectInfo {
     name: String!
     description: String!
@@ -30,5 +37,6 @@ module.exports = gql`
   type Mutation {
     addProject(projectInfo: ProjectInfo): Project!
     addSkill(name: String!): Skill!
+    createMessage(name: String!, email: String!, body: String!): Message!
   }
 `
