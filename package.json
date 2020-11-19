@@ -1,0 +1,21 @@
+{
+  "name": "portfolio",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "serve": "node index",
+    "start": "node server.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "apollo-server": "^2.19.0",
+    "dotenv": "^8.2.0",
+    "mongoose": "^5.10.15"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.6"
+  }
+}
