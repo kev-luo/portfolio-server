@@ -1,13 +1,10 @@
 const mongoose = require("mongoose");
 
-const skillSchema = new mongoose.Schema({
-  name: String,
-  projects: [
-    {
-      type: Schema.Types.ObjectId,
-      ref: "Skill",
-    },
-  ],
-});
+const skillSchema = new mongoose.Schema(
+  {
+    name: String,
+  },
+  { timestamps: true }
+);
 
 module.exports = mongoose.model("Skill", skillSchema);

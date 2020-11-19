@@ -12,6 +12,7 @@ module.exports = gql`
   type Skill {
     id: ID!
     name: String!
+    createdAt: String!
     projects: [Project]!
   }
   input ProjectInfo {
@@ -29,6 +30,6 @@ module.exports = gql`
   }
   type Mutation {
     addProject(projectInfo: ProjectInfo): Project!
-    addSkill(name: String!, projects: [String!]!)
+    addSkill(name: String!): Skill!
   }
 `
