@@ -1,5 +1,6 @@
 module.exports.validateMessage = (name, email, body) => {
   const errors = {};
+
   if (name.trim() === "") {
     errors.name = "Please include your name";
   }
@@ -13,5 +14,9 @@ module.exports.validateMessage = (name, email, body) => {
   }
   if (body.trim() === "") {
     errors.body = "Message must not be empty";
+  }
+  return {
+    errors,
+    valid: Object.keys(errors).length < 1
   }
 };
