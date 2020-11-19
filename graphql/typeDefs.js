@@ -5,9 +5,9 @@ module.exports = gql`
     id: ID!
     name: String!
     description: String!
-    skills: [Skill]!
     repo: String!
     deployed: String!
+    skills: [Skill]!
   }
   type Skill {
     id: ID!
@@ -22,10 +22,10 @@ module.exports = gql`
     deployed: String
   }
   type Query {
-    getProjects: [Project]
-    getProject(projectId: ID!): Project
-    getSkills: [Skill]
-    getSkill(skillId: ID!): Skill
+    getProjects: [Project]!
+    getProject(projectId: ID!): Project!
+    getSkills: [Skill]!
+    getSkill(skillId: ID!): Skill!
   }
   type Mutation {
     addProject(projectInfo: ProjectInfo): Project!
