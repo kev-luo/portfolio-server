@@ -18,9 +18,9 @@ module.exports = gql`
   input ProjectInfo {
     name: String!
     description: String!
-    skills: [String!]!
     repo: String!
     deployed: String
+    skills: [String!]!
   }
   type Query {
     getProjects: [Project]!
