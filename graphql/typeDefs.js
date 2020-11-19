@@ -13,7 +13,6 @@ module.exports = gql`
     id: ID!
     name: String!
     createdAt: String!
-    projects: [Project]!
   }
   input ProjectInfo {
     name: String!
